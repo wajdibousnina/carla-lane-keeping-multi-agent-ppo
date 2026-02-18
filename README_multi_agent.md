@@ -1,14 +1,10 @@
 # CARLA Lane Keeping — Multi-Agent PPO
 
-> **MSc Thesis Project** | Multi-agent extension of a PPO-based lane-keeping system, training multiple independent vehicles simultaneously inside the CARLA simulator.
-
----
-
 ## Overview
 
 This project extends the [single-agent lane-keeping system](https://github.com/YOUR_USERNAME/carla-lane-keeping-ppo-single-agent) to a **multi-agent setting**, where multiple vehicles are trained in parallel within the same CARLA world. Each agent operates independently (no inter-agent coordination), sharing the environment but learning from its own experience stream — effectively providing richer and more diverse training data to the PPO policy.
 
-The work is part of an MSc thesis exploring deep reinforcement learning for autonomous vehicle control.
+The work is part of my MSc thesis exploring deep reinforcement learning for autonomous vehicle control.
 
 ---
 
