@@ -1,10 +1,10 @@
-# 🚗🚗 CARLA Lane Keeping — Multi-Agent PPO
+# CARLA Lane Keeping — Multi-Agent PPO
 
 > **MSc Thesis Project** | Multi-agent extension of a PPO-based lane-keeping system, training multiple independent vehicles simultaneously inside the CARLA simulator.
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project extends the [single-agent lane-keeping system](https://github.com/YOUR_USERNAME/carla-lane-keeping-ppo-single-agent) to a **multi-agent setting**, where multiple vehicles are trained in parallel within the same CARLA world. Each agent operates independently (no inter-agent coordination), sharing the environment but learning from its own experience stream — effectively providing richer and more diverse training data to the PPO policy.
 
@@ -12,18 +12,7 @@ The work is part of an MSc thesis exploring deep reinforcement learning for auto
 
 ---
 
-## 🎬 Demo
-
-> *(Video clip of multiple agents performing lane keeping simultaneously)*
-
-<!-- Replace with your actual GIF/video link after uploading -->
-<!-- ![Multi-Agent Demo](assets/demo.gif) -->
-
-📹 A ~30-second clip of agents executing smooth lane-keeping maneuvers is available in the `assets/` folder.
-
----
-
-## ✨ Key Features
+## Key Features
 
 - **Multiple independent agents** running in the same CARLA world simultaneously
 - **Custom `VecEnv` wrapper** (`MultiAgentCarlaWrapper`) compatible with Stable-Baselines3
@@ -37,22 +26,25 @@ The work is part of an MSc thesis exploring deep reinforcement learning for auto
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
-carla-lane-keeping-ppo-multi-agent/
-│
-├── carla_lane_keeping_env.py      # Custom CARLA Gymnasium environment (single agent)
-├── multi_agent_wrapper.py         # VecEnv wrapper for multi-agent training
-├── training_lane_keeping_ppo.py   # PPO training script (multi-agent enabled)
-├── lane_keeping_parameters.py     # All hyperparameters including MultiAgentParams
-├── assets/                        # Demo videos / plots (add manually)
+carla-lane-keeping-multi-agent-ppo/
+├── docs/
+│   ├── requirements.txt
+│   └── setup_instructions.md
+├── main_files/
+│   ├── carla_lane_keeping_env.py      # Custom CARLA Gymnasium environment (single agent)
+│   ├── multi_agent_wrapper.py         # VecEnv wrapper for multi-agent training
+│   ├── training_lane_keeping_ppo.py   # PPO training script (multi-agent enabled)
+│   └── lane_keeping_parameters.py     # All hyperparameters including MultiAgentParams
+├──LICENSE
 └── README.md
 ```
 
 ---
 
-## ⚙️ Multi-Agent Architecture
+## Multi-Agent Architecture
 
 The `MultiAgentCarlaWrapper` inherits from Stable-Baselines3's `VecEnv`, making it a drop-in replacement for vectorized environments. Each agent is a full `CarlaLaneKeepingEnv` instance with its own vehicle spawned in the CARLA world.
 
@@ -77,7 +69,7 @@ MultiAgentCarlaWrapper (VecEnv)
 
 ---
 
-## ⚙️ Environment Details
+## Environment Details
 
 | Parameter | Value |
 |-----------|-------|
@@ -104,7 +96,7 @@ MultiAgentCarlaWrapper (VecEnv)
 
 ---
 
-## 🧠 PPO Hyperparameters
+## PPO Hyperparameters
 
 | Parameter | Value |
 |-----------|-------|
@@ -121,7 +113,7 @@ MultiAgentCarlaWrapper (VecEnv)
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 - Windows 10/11 (CARLA runs natively on Windows)
 - Python 3.7
@@ -140,7 +132,7 @@ pip install tensorboard
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Install CARLA
 
@@ -186,7 +178,7 @@ tensorboard --logdir ./logs
 
 ---
 
-## 📊 Training Notes
+## Training Notes
 
 - Each agent auto-resets independently when its episode ends
 - Failed agent steps are handled gracefully with dummy observations — training continues uninterrupted
@@ -196,7 +188,7 @@ tensorboard --logdir ./logs
 
 ---
 
-## ⚡ Single-Agent vs Multi-Agent Comparison
+## Single-Agent vs Multi-Agent Comparison
 
 | Feature | Single Agent | Multi Agent |
 |---------|-------------|-------------|
@@ -208,23 +200,32 @@ tensorboard --logdir ./logs
 
 ---
 
-## 🔗 Related Project
+## Related Project
 
 This is the **multi-agent** extension. The original **single-agent** version is available here:
 
-👉 [carla-lane-keeping-ppo-single-agent](https://github.com/YOUR_USERNAME/carla-lane-keeping-ppo-single-agent)
+👉 [carla-lane-keeping-single-agent-ppo](https://github.com/wajdibousnina/carla-lane-keeping-single-agent-ppo/)
 
 ---
 
-## 📝 Citation / Reference
+## Citation / Reference
 
-```
-[Your Name] (2025). CARLA Lane Keeping with PPO — Multi-Agent.
-MSc Thesis Project. GitHub: https://github.com/YOUR_USERNAME/carla-lane-keeping-ppo-multi-agent
+If you use this code in your research, please cite:
+
+```bibtex
+@misc{carla_multiagent_ppo,
+  author = {Wajdi Bousnina},
+  title = {Carla Lane Keeping Multi-Agent PPO},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/wajdibousnina/carla-lane-keeping-multi-agent-ppo}
+}
 ```
 
 ---
 
-## 📬 Contact
+## Contact
 
-Feel free to open an issue or reach out if you have questions about the implementation.
+**Wajdi Bousnina** - wajdibousnina8@gmail.com
+
+Project Link: [https://github.com/wajdibousnina/carla-lane-keeping-multi-agent-ppo](https://github.com/wajdibousnina/carla-lane-keeping-multi-agent-ppo)
