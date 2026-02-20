@@ -181,6 +181,7 @@ tensorboard --logdir ./logs
 - Models are saved every **10,000 timesteps**
 - Evaluation runs every **5,000 timesteps** over 5 episodes
 - To add more agents, increase `MultiAgentParams.NUM_AGENTS` — but monitor your VRAM and RAM usage
+For detailed guidance on tuning all parameters, see [docs/setup_instructions.md](docs/setup_instructions.md).
 
 ---
 
