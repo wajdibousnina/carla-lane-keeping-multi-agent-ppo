@@ -522,7 +522,3 @@ If you encounter issues not covered here, open an issue on the [GitHub repositor
 - The full error message
 - Your system specs (OS, GPU, RAM)
 - Steps to reproduce the problem
-
----
-
-*Setup time estimate: 30–60 minutes for first-time setup.*
