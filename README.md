@@ -182,10 +182,9 @@ tensorboard --logdir ./logs
 - Evaluation runs every **5,000 timesteps** over 5 episodes
 - To add more agents, increase `MultiAgentParams.NUM_AGENTS` — but monitor your VRAM and RAM usage
 
----
-For detailed guidance on tuning all parameters, see [docs/setup_instructions.md](docs/setup_instructions.md).
-
----
+```
+For detailed guidance on tuning all parameters, see [instructions.md](docs/setup_instructions.md).
+```
 
 ## Single-Agent vs Multi-Agent Comparison
 
